@@ -1834,7 +1834,7 @@ async function check(force){
 
   try {
     // درخواست به مسیر پروکسی کلادفلر (فایل functions/api/proxy.js)
-    var r = await fetch("/api/proxy?" + params.toString());
+    var r = await fetch("https://minecraft-dr4w.onrender.com/api/status?" + params.toString());
     var data = await r.json();
     if(!r.ok && data && data.error){
       showError(data.error + (data.detail ? " — " + data.detail : ""));
